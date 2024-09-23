@@ -1,0 +1,33 @@
+body {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+button {
+  width: 4em;
+  height: 4em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+button svg {
+  width: 2.5em;
+  height: 2.5em;
+}
+
+.theme-selector {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1em;
+}

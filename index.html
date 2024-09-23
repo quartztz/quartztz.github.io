@@ -1,159 +1,57 @@
 <head>
-  <style>
-    @import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,slnt,wdth,wght,GRAD,YTUC@8..144,-10..0,25..151,100..1000,-200..150,528..760&display=swap");
-
-    * {
-      margin: 0px;
+  <link rel="stylesheet" type="text/css" href="design.css" />
+  <link rel="stylesheet" type="text/css" href="common.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght,GRAD@8..144,100..1000,-200..150&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,100..800&display=swap"
+    rel="stylesheet"
+  />
+  <script>
+    function toggleCSS(cssLinkIndex) {
+      console.log("swapping");
+      var oldlink = document.getElementsByTagName("link").item(cssLinkIndex);
+      oldlink.href = oldlink.href.includes("newspaper.css")
+        ? "design.css"
+        : "newspaper.css";
+      console.log(oldlink.href);
     }
-
-    body {
-      background-image: linear-gradient(
-          to right,
-          #15790d20 1px,
-          transparent 1px
-        ),
-        linear-gradient(to bottom, #15790d20 1px, transparent 1px);
-      background-size: 16px 16px;
-      font-size: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      width: 100vw;
-      overflow: hidden;
-    }
-
-    .wrapper {
-      display: flex;
-      flex-direction: row;
-      align-items: start;
-      gap: 2em;
-      width: 75vw;
-      padding: 160px 128px;
-    }
-    .side {
-      display: flex;
-      flex-direction: column;
-      gap: 1em;
-    }
-    .black {
-      color: #191920;
-    }
-
-    nav {
-      writing-mode: vertical-lr;
-      cursor: crosshair;
-      color: #191920;
-    }
-    nav * {
-      cursor: crosshair;
-    }
-
-    a,
-    a:visited {
-      color: #191920;
-    }
-    .link-v {
-      text-decoration: none;
-      background-image: linear-gradient(#19192060, #19192060);
-      background-position: 0 0;
-      background-repeat: no-repeat;
-      background-size: 2px 0;
-      transition: background-size 0.1s ease-in;
-    }
-    .link-h {
-      text-decoration: none;
-      background-image: linear-gradient(#19192060, #19192060);
-      background-position: 0 100%;
-      background-repeat: no-repeat;
-      background-size: 0 2px;
-      transition: background-size 0.1s ease-in;
-    }
-    .link-v:hover {
-      background-size: 2px 100%;
-    }
-    .link-h:hover {
-      background-size: 100% 2px;
-    }
-
-    .roboto-flex-title {
-      font-family: "Roboto Flex", sans-serif;
-      font-size: 6em;
-      letter-spacing: -0.06rem;
-      font-optical-sizing: auto;
-      font-weight: 700;
-      font-style: normal;
-      font-variation-settings:
-        "slnt" 0,
-        "wdth" 95,
-        "GRAD" 100,
-        "XOPQ" 96,
-        "XTRA" 468,
-        "YOPQ" 79,
-        "YTAS" 750,
-        "YTDE" -203,
-        "YTFI" 738,
-        "YTLC" 514,
-        "YTUC" 712;
-      line-height: 100%;
-    }
-
-    .roboto-flex-paragraph {
-      font-family: "Roboto Flex", sans-serif;
-      font-size: 1.5em;
-      font-optical-sizing: auto;
-      /* letter-spacing: -0.02em; */
-      font-weight: 300;
-      font-style: normal;
-      font-variation-settings:
-        "slnt" 0,
-        "wdth" 100,
-        "GRAD" -100,
-        "XOPQ" 96,
-        "XTRA" 468,
-        "YOPQ" 79,
-        "YTAS" 750,
-        "YTDE" -203,
-        "YTFI" 738,
-        "YTLC" 514,
-        "YTUC" 712;
-      line-height: 100%;
-    }
-
-    .deco {
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      overflow: hidden;
-      scale: 125%;
-    }
-  </style>
+  </script>
 </head>
 <body>
   <div class="wrapper">
     <div class="side">
       <div class="name">
-        <h1 class="roboto-flex-title black">Jacopo<br />Philip<br />Moretti</h1>
+        <h1 class="title">Jacopo Philip Moretti</h1>
       </div>
 
-      <p class="roboto-flex-paragraph">
-        CompSci student @ <a class="link-h" href="https://www.epfl.ch">EPFL</a>.
+      <p class="paragraph desc">
+        CompSci student @
+        <a class="link-h link" href="https://www.epfl.ch">EPFL</a>.
       </p>
     </div>
     <div class="nav-wrapper">
-      <nav class="roboto-flex-paragraph">
+      <nav class="paragraph">
         <a
-          class="link-v"
+          class="link-v link"
           href="https://github.com/quartztz/CV/blob/master/main.pdf"
         >
           my cv
         </a>
         •
-        <a class="link-v" href="https://github.com/quartztz/">my projects</a>
+        <a class="link-v link" href="https://github.com/quartztz/"
+          >my projects</a
+        >
         •
-        <a class="link-v" href="https://quartztz.bandcamp.com">my music</a>
+        <a class="link-v link" href="https://quartztz.bandcamp.com">my music</a>
         •
-        <a class="link-v" href="https://quartztz.github.io/xzbfsf">my blog</a>
+        <a class="link-v link" href="https://quartztz.github.io/xzbfsf"
+          >my blog</a
+        >
       </nav>
     </div>
   </div>
@@ -182,5 +80,22 @@
         fill="#191920"
       />
     </svg>
+  </div>
+  <div class="theme-selector">
+    <button onclick="toggleCSS(0)">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        <g
+          id="SVGRepo_tracerCarrier"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        ></g>
+        <g id="SVGRepo_iconCarrier">
+          <path d="M5 6.5H19V8H5V6.5Z" fill="#191920"></path>
+          <path d="M5 16.5H19V18H5V16.5Z" fill="#191920"></path>
+          <path d="M5 11.5H19V13H5V11.5Z" fill="#191920"></path>
+        </g>
+      </svg>
+    </button>
   </div>
 </body>
