@@ -40,14 +40,13 @@ button svg {
 }
 
 .theme-selector {
+  z-index: 1;
+  font-size: 16px;
+  font-family: "IBM Plex Mono", monospace;
   position: absolute;
   top: 0;
   right: 0;
   padding: 1em;
-}
-
-.regular-text {
-  font-family: "IBM Plex Mono", monospace;
 }
 
 .theme-navbar {
