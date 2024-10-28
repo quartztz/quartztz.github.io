@@ -20,6 +20,16 @@ body {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  height: 100%;
+  width: 100%;
+  transition: all ease-in .02s;
+}
+
+.small {
+  height: calc(100% - 5em);
+  width: calc(100% - 5em);
+  border-radius: 1em;
+  transition: all ease-out .02s;
 }
 
 button {
@@ -67,15 +77,4 @@ button svg {
 .theme-navbar>button {
   font-size: 16px;
   color: white;
-}
-
-.big {
-  height: 100%;
-  width: 100%;
-}
-
-.small {
-  height: calc(100% - 5em);
-  width: calc(100% - 5em);
-  border-radius: 1em;
 }

@@ -24,10 +24,10 @@
 
     function toggleMainSize() {
       var main = document.getElementsByClassName("main")[0]
-      if (main.classList.contains('big')) {
-        main.classList.replace("big", "small")
+      if (!main.classList.contains('small')) {
+        main.classList.add("small")
       } else {
-        main.classList.replace("small", "big")
+        main.classList.remove("small")
       }
     }
 
@@ -41,7 +41,7 @@
 </head>
 
 <body>
-  <div class="main big">
+  <div class="main">
     <div class="extend">
       <div class="wrapper">
         <div class="side">
