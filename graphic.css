@@ -1,8 +1,4 @@
-* {
-  margin: 0px;
-}
-
-body {
+.main {
   background-image: linear-gradient(to right, #15790d20 1px, transparent 1px),
     linear-gradient(to bottom, #15790d20 1px, transparent 1px);
   background-size: 1rem 1rem;
@@ -16,12 +12,14 @@ body {
   width: 75vw;
   padding: 160px 128px;
 }
+
 .side {
   display: flex;
   flex-direction: column;
   max-width: min-content;
   gap: 1em;
 }
+
 h1 {
   word-spacing: 9999rem;
 }
@@ -41,6 +39,7 @@ nav {
   align-items: center;
   width: fit-content;
 }
+
 nav * {
   cursor: crosshair;
 }
@@ -49,23 +48,28 @@ a,
 a:visited {
   color: #191920;
 }
+
 .link {
   text-decoration: none;
   background-image: linear-gradient(#19192060, #19192060);
   background-repeat: no-repeat;
   transition: background-size 0.2s ease-in;
 }
+
 .link-v {
   background-position: 5% 0;
   background-size: 2px 0;
 }
+
 .link-h {
   background-position: 0 95%;
   background-size: 0 2px;
 }
+
 .link-v:hover {
   background-size: 2px 100%;
 }
+
 .link-h:hover {
   background-size: 100% 2px;
 }
