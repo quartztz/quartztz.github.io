@@ -26,10 +26,14 @@ body {
 }
 
 .small {
-  height: calc(100% - 5em);
-  width: calc(100% - 5em);
+  height: calc(100% - 6em);
+  width: calc(100% - 6em);
   border-radius: 1em;
-  transition: all ease-out .02s;
+  transition: all ease-out .1s;
+}
+
+.subtitle {
+  display: none;
 }
 
 button {
@@ -77,4 +81,19 @@ button svg {
 .theme-navbar>button {
   font-size: 16px;
   color: white;
+}
+
+.deco-graphic,
+.subtitle,
+.deco-texlive {
+  display: none;
+}
+
+nav ol {
+  list-style: none;
+}
+
+ol {
+  padding: 0;
+  margin: 0;
 }
