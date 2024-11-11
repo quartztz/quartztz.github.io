@@ -89,11 +89,8 @@ button svg {
   display: none;
 }
 
-nav ol {
-  list-style: none;
-}
-
 ol {
+  list-style: none;
   padding: 0;
   margin: 0;
 }

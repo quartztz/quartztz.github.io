@@ -36,12 +36,15 @@ nav {
   writing-mode: vertical-lr;
   cursor: crosshair;
   color: #191920;
+  width: fit-content;
+}
+
+ol {
   display: flex;
   flex-direction: row;
   gap: 1em;
   justify-content: center;
   align-items: center;
-  width: fit-content;
 }
 
 nav * {
