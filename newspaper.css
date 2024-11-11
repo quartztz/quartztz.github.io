@@ -19,7 +19,11 @@ body {
 }
 
 .name {
-  padding: 2em 0;
+  padding: 0;
+}
+
+.side {
+  padding: 1em 0;
 }
 
 a {
@@ -53,10 +57,11 @@ a {
   letter-spacing: -0.04em;
 }
 
-nav {
+ol {
   display: flex;
   flex-direction: row;
-  gap: 0.5em;
+  gap: 1em;
+  color: #515151;
 }
 
 .paragraph {
@@ -68,8 +73,6 @@ nav {
   letter-spacing: -0.04em;
 }
 
-
 li {
   display: inline-block;
-  margin: 0.5em;
 }
