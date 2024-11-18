@@ -1,3 +1,5 @@
+@import url('https://fonts.cdnfonts.com/css/neue-haas-grotesk-display-pro');
+
 .main {
   background-image: linear-gradient(to right, #15790d20 1px, transparent 1px),
     linear-gradient(to bottom, #15790d20 1px, transparent 1px);
@@ -82,9 +84,8 @@ a:visited {
 }
 
 .title {
-  font-family: "Roboto Flex", sans-serif;
+  font-family: "Neue Haas Grotesk Display Pro", sans-serif;
   font-size: 6em;
-  letter-spacing: -0.06rem;
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
@@ -104,9 +105,8 @@ a:visited {
 }
 
 .paragraph {
-  font-family: "Roboto Flex", sans-serif;
+  font-family: "Neue Haas Grotesk Display Pro", sans-serif;
   font-size: 1.5em;
-  letter-spacing: -0.02em;
   font-weight: 300;
   font-style: normal;
   font-variation-settings:
