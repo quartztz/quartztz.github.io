@@ -6,10 +6,6 @@
   height: 100%;
 }
 
-* {
-  /* letter-spacing: -0.01em; */
-}
-
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -73,7 +69,7 @@ nav ol {
 }
 
 .wrapper {
-  width: min(48em, 50%);
+  width: min(32em, 50%);
   height: 50%;
 }
 

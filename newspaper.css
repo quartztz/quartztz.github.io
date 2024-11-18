@@ -61,21 +61,20 @@ a {
 }
 
 ol {
-  ol {
-    display: flex;
-    flex-direction: row;
-    gap: 1em;
-  }
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+}
 
-  .paragraph {
-    font-family: "EB Garamond", serif;
-    font-optical-sizing: auto;
-    font-weight: 200;
-    font-style: normal;
-    font-size: 1.5em;
-    letter-spacing: -0.04em;
-  }
+.paragraph {
+  font-family: "EB Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 1.5em;
+  letter-spacing: -0.04em;
+}
 
-  li {
-    display: inline-block;
-  }
+li {
+  display: inline-block;
+}
