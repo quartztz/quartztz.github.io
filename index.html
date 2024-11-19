@@ -1,5 +1,5 @@
 <head>
-  <link rel="stylesheet" type="text/css" href="graphic.css" />
+  <link rel="stylesheet" type="text/css" href="terminal.css" />
   <link rel="stylesheet" type="text/css" href="common.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -90,19 +90,26 @@
           </p>
         </div>
         <div class="nav-wrapper">
+          <div class="deco-terminal paragraph">
+            <span>quartztz@website ~<br /> > ls</span>
+          </div>
           <nav>
+            <span class="deco-terminal" style="visibility: hidden;">
+              >\
+            </span>
             <ol>
               <li>
-                <a class="link-v link paragraph" href="https://github.com/quartztz/CV/blob/master/main.pdf">my cv</a>
+                <a id="cv" class="link-v link paragraph" href="https://github.com/quartztz/CV/blob/master/main.pdf">my
+                  cv</a>
               </li>
               <li>
-                <a class="link-v link paragraph" href="https://github.com/quartztz/">my projects</a>
+                <a id="projects" class="link-v link paragraph" href="https://github.com/quartztz/">my projects</a>
               </li>
               <li>
-                <a class="link-v link paragraph" href="https://quartztz.bandcamp.com">my music</a>
+                <a id="music" class="link-v link paragraph" href="https://quartztz.bandcamp.com">my music</a>
               </li>
               <li>
-                <a class="link-v link paragraph" href="https://quartztz.github.io/xzbfsf">my blog</a>
+                <a id="blog" class="link-v link paragraph" href="https://quartztz.github.io/xzbfsf">my blog</a>
               </li>
             </ol>
           </nav>
@@ -142,6 +149,9 @@
       </li>
       <li class="theme-list-item" id="texlive">
         texlive
+      </li>
+      <li class="theme-list-item" id="terminal">
+        terminal
       </li>
     </ul>
   </div>

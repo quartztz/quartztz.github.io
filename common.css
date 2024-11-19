@@ -37,7 +37,8 @@ body {
 
 .deco-graphic,
 .subtitle,
-.deco-texlive {
+.deco-texlive,
+.deco-terminal {
   display: none;
 }
 
