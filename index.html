@@ -1,5 +1,5 @@
 <head>
-  <link rel="stylesheet" type="text/css" href="texlive.css" />
+  <link rel="stylesheet" type="text/css" href="graphic.css" />
   <link rel="stylesheet" type="text/css" href="common.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -9,6 +9,10 @@
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,100..800&display=swap"
     rel="stylesheet" />
   <script>
+    var switcher_displayed = false;
+    var listItems = undefined;
+    var current = 0;
+
     function switchTheme(themeName) {
       var oldlink = document.getElementsByTagName("link")[0];
       var oldcommon = document.getElementsByTagName("link")[1]; // ew
@@ -20,21 +24,54 @@
       }
     }
 
-    function toggleMainSize() {
-      var main = document.getElementsByClassName("main")[0]
-      if (!main.classList.contains('small')) {
-        main.classList.add("small")
+    function toggleSwitcher() {
+      var switcher = document.getElementById("theme-switcher");
+      console.log("toggling", switcher);
+      if (!switcher_displayed) {
+        switcher_displayed = true;
+        switcher.classList.remove("hidden");
+
+        // bootstrap styles
+        listItems = document.querySelectorAll(".theme-list-item");
+        current = 0;
+        listItems.forEach(e => {
+          e.classList.remove("highlighted");
+        });
+        listItems[current].classList.add("highlighted");
       } else {
-        main.classList.remove("small")
+        switcher_displayed = false;
+        switcher.classList.add("hidden");
       }
     }
 
-    document.onkeypress = function (e) {
-      e = e || window.event
-      if (e.keyCode == 92) {
-        toggleMainSize();
+    document.addEventListener("keydown", function (event) {
+      if (event.key === ":") {
+        console.log("color");
+        toggleSwitcher();
+      } else if (switcher_displayed) {
+        switch (event.key) {
+          case "Escape":
+            toggleSwitcher();
+            break;
+          case "ArrowUp":
+            console.log("up");
+            listItems[current].classList.remove("highlighted");
+            current = current > 0 ? --current : 0;
+            listItems[current].classList.add("highlighted");
+            break;
+          case "ArrowDown":
+            console.log("down");
+            listItems[current].classList.remove("highlighted");
+            current = current < listItems.length - 1 ? ++current : listItems.length - 1;
+            listItems[current].classList.add("highlighted");
+            break;
+          case "Enter":
+            switchTheme(listItems[current].id);
+            toggleSwitcher();
+            break;
+        }
       }
-    }
+    });
   </script>
 </head>
 
@@ -49,7 +86,7 @@
           </div>
           <h2 class="deco-texlive">Abstract.</h2>
           <p class="paragraph desc">
-            Computer Science student at <a class="link-h link" href="https://www.epfl.ch">EPFL</a>.
+            MSc Computer Science student at <a class="link-h link" href="https://www.epfl.ch">EPFL</a>.
           </p>
         </div>
         <div class="nav-wrapper">
@@ -90,11 +127,22 @@
     </div>
   </div>
   <div class="theme-selector">
-    <p class="regular-text"> Press \ to open theme selector.</p>
+    <p class="regular-text"> Press : to open theme selector.</p>
   </div>
-  <div class="theme-navbar">
-    <button onclick="switchTheme('graphic')"><b>GRAPHIC</b></button>
-    <button onclick="switchTheme('newspaper')"><b>NEWSPAPER</b></button>
-    <button onclick="switchTheme('texlive')"><b>TEXLIVE</b></button>
+  <div class="theme-switcher hidden" id="theme-switcher">
+    <div class="searchbar">
+      <input type="text" class="searchbar-input" placeholder="Feature coming soon..." />
+    </div>
+    <ul class="theme-list">
+      <li class="theme-list-item" id="graphic">
+        graphic
+      </li>
+      <li class="theme-list-item" id="newspaper">
+        newspaper
+      </li>
+      <li class="theme-list-item" id="texlive">
+        texlive
+      </li>
+    </ul>
   </div>
 </body>

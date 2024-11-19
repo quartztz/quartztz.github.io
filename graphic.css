@@ -3,7 +3,7 @@
 .main {
   background-image: linear-gradient(to right, #15790d20 1px, transparent 1px),
     linear-gradient(to bottom, #15790d20 1px, transparent 1px);
-  background-size: 1rem 1rem;
+  background-size: 1em 1em;
 }
 
 .wrapper {
@@ -15,15 +15,12 @@
   padding: 160px 128px;
 }
 
-.name {
-  padding-right: 2em;
-}
-
 .side {
   display: flex;
   flex-direction: column;
   max-width: min-content;
   gap: 1em;
+  padding-right: 2em;
 }
 
 h1 {
@@ -44,7 +41,7 @@ nav {
 ol {
   display: flex;
   flex-direction: row;
-  gap: 1em;
+  gap: 0.5em;
   justify-content: center;
   align-items: center;
 }
@@ -85,22 +82,10 @@ a:visited {
 
 .title {
   font-family: "Neue Haas Grotesk Display Pro", sans-serif;
-  font-size: 6em;
+  font-size: 5em;
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
-  font-variation-settings:
-    "slnt" 0,
-    "wdth" 95,
-    "GRAD" 100,
-    "XOPQ" 96,
-    "XTRA" 468,
-    "YOPQ" 79,
-    "YTAS" 750,
-    "YTDE" -203,
-    "YTFI" 738,
-    "YTLC" 514,
-    "YTUC" 712;
   line-height: 100%;
 }
 
@@ -109,18 +94,6 @@ a:visited {
   font-size: 1.5em;
   font-weight: 300;
   font-style: normal;
-  font-variation-settings:
-    "slnt" 0,
-    "wdth" 100,
-    "GRAD" -100,
-    "XOPQ" 96,
-    "XTRA" 468,
-    "YOPQ" 79,
-    "YTAS" 750,
-    "YTDE" -203,
-    "YTFI" 738,
-    "YTLC" 514,
-    "YTUC" 712;
   line-height: 100%;
 }
 
